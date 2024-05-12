@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kviz</title>
+    <style>       
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150vh;
+            background-color: #6fc0dc;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0;
+            color: #003163;
+        }
+        h3 {
+            color: #1e3f66;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Dobrodošel v kvizu!</h1>
+    <form action="/submit" method="post">
+        <h3>Radio Button vprašanja:</h3>
+        <p>1. Kaj je glavno mesto Kanade?</p>
+        <input type="radio" name="q1_1" value="incorrect"> Toronto<br>
+        <input type="radio" name="q1_1" value="correct"> Ottawa<br>
+        <input type="radio" name="q1_1" value="incorrect"> Vancouver<br>
+
+        <p>2. Katera je najdaljša reka na svetu?</p>
+        <input type="radio" name="q1_2" value="correct"> Nil<br>
+        <input type="radio" name="q1_2" value="incorrect"> Amazonka<br>
+        <input type="radio" name="q1_2" value="incorrect"> Rumena reka<br>
+
+        <p>3. Katera država je znana kot dežela vzhajajočega sonca?</p>
+        <input type="radio" name="q1_3" value="incorrect"> Indija<br>
+        <input type="radio" name="q1_3" value="incorrect"> Kitajska<br>
+        <input type="radio" name="q1_3" value="correct"> Japonska<br>
+
+        <h3>Checkbox vprašanja:</h3>
+        <p>4. Kateri od teh držav sta v Evropi?</p>
+        <input type="checkbox" name="q2_1" value="correct"> Španija<br>
+        <input type="checkbox" name="q2_2" value="correct"> Nemčija<br>
+        <input type="checkbox" name="q2_3" value="incorrect"> Brazilija<br>
+        <input type="checkbox" name="q2_4" value="incorrect"> Kanada<br>
+
+        <p>5. Kaj od tega je celina?</p>
+        <input type="checkbox" name="q2_5" value="correct"> Afrika<br>
+        <input type="checkbox" name="q2_6" value="incorrect"> Indija<br>
+        <input type="checkbox" name="q2_7" value="correct"> Australija<br>
+        <input type="checkbox" name="q2_8" value="incorrect"> Arktika<br>
+
+        <p>6. Kateri dve državi sta v Južni Ameriki?</p>
+        <input type="checkbox" name="q2_9" value="incorrect"> Mehika<br>
+        <input type="checkbox" name="q2_10" value="correct"> Brazilija<br>
+        <input type="checkbox" name="q2_11" value="incorrect"> Kanada<br>
+        <input type="checkbox" name="q2_12" value="correct"> Čile<br>
+
+        <h3>User Input vprašanje:</h3>
+        <p>7. Katera je najvišja gora na svetu?</p>
+        <input type="text" name="q3" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
