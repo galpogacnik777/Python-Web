@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnevnik</title>
+    <style>       
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #6fc0dc;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0;
+            color: #003163;
+        }
+        .entry-container {
+            display: flex; 
+            justify-content: space-between;
+            width: 40%; 
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Dnevnik</h1>
+    {% for entry in entries %}
+    <div class="entry-container">
+        <h3>Date: {{ entry[0] }}</h3>
+        <h3>Score: {{ entry[1] }}</h3>
+    </div>
+    {% endfor %}
+    <form action="/" method="get">
+        <input type="submit" value="Nazaj"><br><br>
+    </form>
+    <form action="/drop_table" method="post">
+        <input type="submit" value="Izbrisi tabelo">
+    </form>
+</body>
+</html>
